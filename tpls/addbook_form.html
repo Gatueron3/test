@@ -1,0 +1,58 @@
+<div class="panel panel-primary add-books" ng-controller="addBookCtrl">
+	<div class="panel-heading">
+		<div class="panel-title">新增书籍</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" name="addForm">
+					<div class="form-group">
+						<label class="col-md-2 control-lable">书名</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" name="bookName" ng-model="book.name" required placeholder="最多只能输入32个字符" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-lable">类型</label>
+						<div class="col-md-10">
+							<select class="form-control" required ng-model="book.type">
+								<option>计算机</option>
+								<option>金融</option>
+								<option>哲学</option>
+								<option>高端办公</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-lable">出版日期</label>
+						<div class="col-md-10">
+							<input type="date" class="form-control" required
+							name="bookDate" ng-model="book.date" placeholder="yyyy-MM-dd">
+							<span ng-show="addForm.bookDate.$error.date">请输入正确的出版日期格式</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-lable">作者</label>
+						<div class="col-md-10">
+							<input type="text" ng-model="book.author" placeholder="最多16个字符" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox col-md-offset-2">
+							<label>
+								<input type="checkbox" ng-model="book.ebook">是否有电子书
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-10">
+						    <a ui-sref="booklist" class="btn btn-success" ng-disabled="addForm.$invalid">保存</a>
+						    <a ui-sref="booklist({bookType:0})" class="btn btn-primary">取消</a>
+						    <button class="btn btn-default" ng-click="emptyData()">清空表单</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

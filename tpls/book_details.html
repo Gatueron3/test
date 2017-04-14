@@ -1,0 +1,25 @@
+<div class="well" ng-controller="BookDetailCtrl">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="row">
+				<div class="col-md-12">
+					书名：{{details.name}}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a ui-sref="booklist({bookType:0})" class="btn btn-primary">返回列表</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+					<div>作者：{{details.author}}</div>
+					<div>出版时间：{{details.pubTime}}</div>
+					<div>价格：{{details.price }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

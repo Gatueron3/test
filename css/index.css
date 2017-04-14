@@ -1,0 +1,24 @@
+/*ui-grid*/
+.myGrid {
+    width: 600px;
+    height: 400px;
+}
+
+/*登录页面*/
+.login-form {
+	width: 600px;
+	margin: 100px auto 0;
+	border: none;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+}
+
+/*添加书籍*/
+.add-books {
+	width: 960px;
+	margin: 0 auto;
+}
+.well {
+	width: 960px;
+	margin: auto;
+	margin-top: 100px;
+}
